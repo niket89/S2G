@@ -1,5 +1,6 @@
 package com.app.s2g.service2go;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -32,8 +33,12 @@ public class Register extends AppCompatActivity {
             }
         });
 
-
-
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(getApplicationContext(),HomePage.class);
+        startActivity(i);
+        setContentView(R.layout.activity_home_page);
+    }
 }
